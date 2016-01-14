@@ -2,6 +2,8 @@
 
 # TOOD: Unregister from load balancer
 
+echo "Updating delighted ..."
+
 DID_PERFORM_UPDATE=$(docker pull promedia/delighted | grep "up to date") 
 
 if [ ! -z "$DID_PERFORM_UPDATE" -a "$DID_PERFORM_UPDATE" != " " ]; then
