@@ -9,5 +9,6 @@ if [ ! -z "$DID_PERFORM_UPDATE" -a "$DID_PERFORM_UPDATE" != " " ]; then
 else
     echo "Image has been updated. Restart"
 	docker kill $(docker ps | grep "grabberd" | awk '{print $1}')
-	docker run -d promedia/grabberd
+#	docker run -d promedia/grabberd
+	./update_grabberd.sh
 fi
